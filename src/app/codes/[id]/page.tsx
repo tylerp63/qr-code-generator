@@ -5,14 +5,14 @@ import { updateUrl } from "@/actions/actions";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
-export default async function CodePage({ params }) {
+export default async function CodePage({ params }: { params: any }) {
   const code = await prisma.code.findUnique({
     where: {
       id: params.id,
     },
   });
   console.log(code?.id);
-  const updateUrlWithId = updateUrl.bind(null, code?.id);
+  const updateUrlWithId = updateUrl.bind(null, code?.id ?? "");
   return (
     <div>
       <h1>{code?.url}</h1>

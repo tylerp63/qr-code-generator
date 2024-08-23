@@ -2,7 +2,6 @@ import Link from "next/link";
 import prisma from "@/lib/db";
 import React from "react";
 import { updateUrl } from "@/actions/actions";
-import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 export default async function CodePage({ params }: { params: any }) {

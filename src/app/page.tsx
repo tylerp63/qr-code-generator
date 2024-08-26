@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <main>
-      <Link href="/codes" className="underline">
-        View codes
-      </Link>
+      <div className="underline flex justify-center items-center h-screen">
+        <Button>
+          <Link href="/codes">View codes</Link>
+        </Button>
+      </div>
     </main>
   );
 }

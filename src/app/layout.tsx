@@ -16,7 +16,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="mx-auto max-w-5xl text-2xl flex gap-2">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
